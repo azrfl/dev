@@ -7,11 +7,25 @@
     <title>Azraful</title>
 </head>
 <body>
+<script>
+  // Fetch data from GitHub API
+  fetch(`https://api.github.com/repos/azrfl/QREX-Helpdesk/contents`)
+    .then(response => response.json())
+    .then(data => {
+      // Iterate through the files and add a row to the table for each one
+      data.forEach(file => {
+        const table = document.getElementById("project-table").getElementsByTagName('tbody')[0];
+        const row = table.insertRow();
+        const fileNameCell = row.insertCell(0);
+        const lastModifiedCell = row.insertCell(1);
+        fileNameCell.innerHTML = file.name;
+        lastModifiedCell.innerHTML = file.updated_at;
+      });
+    });
+</script>
+    <h1> test dashboard</h1>
+    <table id="project-table"><thead><tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr></thead><tbody id="table-body"></tbody></table>
     
-
-    Hello world <br>
-    I'm 
-    <h4>Azraful</h4>
-    
+        
 </body>
 </html>
