@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELETE RECORD</title>
+
+    <style>  body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:aqua;background-color: black;}
+    span[name="aa"] {color: chartreuse;}
+    span[name="bb"] {color:rgb(255, 0, 200);}
+    
+    </style>
+</head>
+<body>
+
+    <h2>Qrex Delete/ Show record</h2>
+Example FG VIEW
+
+<textarea name="" id="" cols="100" rows="1" >http://172.16.10.61:8014/pages/FG/viewPage-FG.php?LotIDKey=1113671&RecordID=1016179</textarea>
+<br><span style="color:chartreuse;">LotIDKey : </span><input type="number" name="" id="lotid"> &nbsp; <span style="color:rgb(255, 0, 200);">RecordID : </span><input type="number" name="" id="recid"> <button onclick="change()">GO</button>
+<style>table , td , th {padding:5px 5px;border-collapse: collapse;border: 1px solid grey;font-size: 0.9em;}
+th {background-color: darkblue;}
+</style>
+
+
+<script>
+function change() {
+  var ll = document.getElementById('lotid').value;
+  var rr = document.getElementById('recid').value;
+
+  // Get all the <span> elements with name="aa"
+  var aaSpans = document.querySelectorAll('span[name="aa"]');
+  // Loop through each <span> and set its innerHTML to ll
+  aaSpans.forEach(function(span) {
+    span.innerHTML = ll;
+  });
+
+  // Get all the <span> elements with name="bb"
+  var bbSpans = document.querySelectorAll('span[name="bb"]');
+  // Loop through each <span> and set its innerHTML to rr
+  bbSpans.forEach(function(span) {
+    span.innerHTML = rr;
+  });
+}
+
+</script><br><br>
+<table width="100%">
+    <tr><th>Table</th><th>VIEW</th><th>DELETE</th></tr>
+    <tr><td>
+        T_Lot_FG
+</td><td>
+    SELECT TOP (1000) [LotIDKey]
+    ,[PlantKey]
+    ,[PalletID]
+    ,[BatchNumber]<br>
+    ,[SONumber]
+    ,[SOItemNumber]
+    ,[CustomerKey]
+    ,[BrandKey]
+    ,[LotNumber]
+    ,[LotCount]<br>
+FROM [QAPQC02].[dbo].[T_Lot_FG]<br>
+WHERE LotIDKey =<span name="aa"></span>
+</td> <td>
+DELETE FROM [QAPQC02].[dbo].[T_Lot_FG]
+<br>WHERE LotIDKey =&nbsp;<span name="aa"></span>
+</td></tr>
+    <tr>
+        <td>T_Record_Instrument</td>
+        <td>
+            SELECT TOP (1000) [RecordID]
+      ,[InstrumentKey]
+      ,[InstrumentValue]<br>
+  FROM [QAPQC02].[dbo].[T_Record_Instrument]
+  <br>WHERE RecordID =&nbsp;<span name="bb"></span>
+</td>
+        <td>
+            DELETE FROM [QAPQC02].[dbo].[T_Record_Instrument]
+            <br>WHERE RecordID =&nbsp;<span name="bb"></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            T_Record_Test</td>
+        <td>SELECT TOP (1000) [RecordID]
+            ,[TestKey]
+            ,[TestValue]
+            ,[SRText]<br>
+        FROM [QAPQC02].[dbo].[T_Record_Test]
+        <br>WHERE RecordID =&nbsp;<span name="bb"></span>
+        </td>
+        <td>
+            DELETE FROM [QAPQC02].[dbo].[T_Record_Test]
+            <br>WHERE RecordID =&nbsp;<span name="bb"></span>
+          
+        </td>
+    </tr>
+    <tr>
+        <td>
+            T_Record_SampleSize
+        </td>
+        <td>
+        SELECT TOP (1000) [RecordID]
+      ,[SampleSizeCategoryKey]
+      ,[SampleSizeValue]<br>
+  FROM [QAPQC02].[dbo].[T_Record_SampleSize]
+  <br>WHERE RecordID =&nbsp;<span name="bb"></span>
+        </td>
+        <td>DELETE FROM [QAPQC02].[dbo].[T_Record_SampleSize]<br>WHERE RecordID =&nbsp;<span name="bb"></span>
+        </td>
+    </tr>
+
+  <tr> <td>T_Record_Defect   </td><td>
+    SELECT TOP (1000) [RecordID]
+      ,[DefectKey]
+      ,[DefectValue]<br>
+  FROM [QAPQC02].[dbo].[T_Record_Defect]
+    <br>WHERE RecordID =&nbsp;<span name="bb"></span>
+</td> <td>DELETE FROM [QAPQC02].[dbo].[T_Record_Defect]<br>WHERE RecordID =&nbsp;<span name="bb"></span></td></tr>
+  <tr> <td>T_Record_AQL  </td><td>
+    SELECT TOP (1000) [RecordID]
+    ,[AQLDescriptionKey]
+    ,[AQLValue]<br>
+FROM [QAPQC02].[dbo].[T_Record_AQL]
+    <br>WHERE RecordID =&nbsp;<span name="bb"></span>
+</td> <td>DELETE FROM [QAPQC02].[dbo].[T_Record_AQL]<br>WHERE RecordID =&nbsp;<span name="bb"></span></td></tr>
+  <tr> <td>T_Record_UDResult     </td><td>
+    SELECT TOP (1000) [RecordID]
+    ,[UDResultKey]<br>
+FROM [QAPQC02].[dbo].[T_Record_UDResult]
+    <br>WHERE RecordID =&nbsp;<span name="bb"></span>
+</td> <td>DELETE FROM [QAPQC02].[dbo].[T_Record_UDResult]<br>WHERE RecordID =&nbsp;<span name="bb"></span></td></tr>
+<tr> <td>T_Record_Master   </td><td>
+    SELECT TOP (1000) [RecordID]
+    ,[LotIDKey]
+    ,[InspectionCount]
+    ,[RecordCreatedDateTime]
+    ,[LastSavedDateTime]<br>
+    ,[InspectionUserID]
+    ,[VerifiedDate]
+    ,[VerifierID]
+    ,[RecordStatusFlag]<br>
+FROM [QAPQC02].[dbo].[T_Record_Master]
+<br>WHERE RecordID =&nbsp;<span name="bb"></span>
+</td> <td>DELETE FROM [QAPQC02].[dbo].[T_Record_Master]<br>WHERE RecordID =&nbsp;<span name="bb"></span></td></tr>
+
+  <tr> <td>T_Lot_CartonNum   </td><td>
+    SELECT TOP (1000) [LotIDKey]
+    ,[CartonNum]<br>
+FROM [QAPQC02].[dbo].[T_Lot_CartonNum]
+    <br>WHERE LotIDKey =&nbsp;<span name="aa"></span>
+</td> <td>DELETE FROM [QAPQC02].[dbo].[T_Lot_CartonNum]<br>WHERE LotIDKey =&nbsp;<span name="aa"></span></td></tr>
+  <tr> <td>T_Lot_PackingDate     </td><td>
+    SELECT TOP (1000) [LotIDKey]
+      ,[PackingDate]
+      ,[Shift]<br>
+  FROM [QAPQC02].[dbo].[T_Lot_PackingDate]
+    <br>WHERE LotIDKey =&nbsp;<span name="aa"></span>
+</td> <td>DELETE FROM [QAPQC02].[dbo].[T_Lot_PackingDate]<br>WHERE LotIDKey =&nbsp;<span name="aa"></span></td></tr>
+  <tr> <td>T_Lot_ProductionDateWLine     </td><td>
+    SELECT TOP (1000) [LotIDKey]
+    ,[PlantKey]
+    ,[ProductionDate]
+    ,[Shift]
+    ,[ProductionLineKey]
+    ,[ProductionKey]<br>
+FROM [QAPQC02].[dbo].[T_Lot_ProductionDateWLine]
+    <br>WHERE LotIDKey =&nbsp;<span name="aa"></span>
+</td> <td>DELETE FROM [QAPQC02].[dbo].[T_Lot_ProductionDateWLine]<br>WHERE LotIDKey =&nbsp;<span name="aa"></span></td></tr>
+
+<tr> <td>T_Lot_Master  </td><td>
+    SELECT TOP (1000) [LotIDKey]
+    ,[LotCreatedDate]
+    ,[LotCreatedUserID]<br>
+FROM [QAPQC02].[dbo].[T_Lot_Master]
+    <br>WHERE LotIDKey =&nbsp;<span name="aa"></span>
+</td> <td>DELETE FROM [QAPQC02].[dbo].[T_Lot_Master]<br>WHERE LotIDKey =&nbsp;<span name="aa"></span></td></tr>
+
+
+</table>
+<br>DELETE FROM T_Lot_FG_Preset WHERE LotIDKey = @LotIDKey
+<br>DELETE FROM T_Record_AQL_Preset WHERE RecordID in (SELECT RecordID from T_Record_Master WHERE LotIDKey = @LotIDKey)
+<br>DELETE FROM T_Record_SampleSize_Preset WHERE RecordID in (SELECT RecordID from T_Record_Master WHERE LotIDKey = @LotIDKey)
+
+
+
+<br> example update:<br>
+UPDATE [QAPQC02].[dbo].[QREX_MMSO]<br>
+SET plant = '5201'<br>
+WHERE [id] = '1'<br>
+
+
+
+
+
+</body>
+</html>
