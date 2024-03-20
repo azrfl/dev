@@ -1,15 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV : Mohd Azraful Azizi</title>
 </head>
+<body>
+
 	<body>
-  <link rel="prefetch stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
+        <link rel="prefetch stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css">
         <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
         
-	
 <style>
 :root {
 	--color-gray-light-1: #f8f8f8;
@@ -80,7 +82,7 @@ body {
 	transform: skewY(-5deg);
 }
 .photo img {
-	width: 80%;
+	width: 70%;
 	border-radius: 50%;
 }
 .bio .name {
@@ -271,7 +273,7 @@ body {
 	background-color: var(--color-gray-dark-3);
 }
 .pg-list > li > span {
-	flex: 0 0 100px;
+	flex: 0 0 200px;
 }
 .sb-skeleton > .skillbar {
 	position: absolute;
@@ -288,48 +290,24 @@ body {
 }
 .tool-list > li {
 	position: relative;
-	text-align: center;
+	text-align: left;
 	flex: 0 0 25%;
+    height: 150px;
 }
-.tool-list > li > svg {
-	position: relative;
-	fill: transparent;
-	width: 95%;
-	transform: rotate(-90deg);
-}
-.tool-list > li > svg > circle {
-	stroke-width: 1px;
-	stroke: #cdcdcd;
-}
-.tool-list > li > svg > circle.cbar {
-	stroke-width: 3px;
-	stroke: var(--profile-theme);
-	stroke-linecap: round;
-	stroke-dashoffset: 0;
-	stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
-	transition: all 0.8s;
-	transition-timing-function: cubic-bezier(.64,.51,.16,.86);
-}
-.tool-list > li:hover > svg > circle.cbar {
-	stroke-width: 4px;
-	stroke: var(--color-tiffany);
-	stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
-}
+
+.tool-list > li > img{width:95%;box-shadow:2px 2px 5px  #cdcdcd;}
+
 .tool-list > li > .tl-name,
 .tool-list > li > .tl-exp {
-	position: absolute;
-	left: 50%;
+
 	color: var(--color-gray-dark-1);
 }
 .tool-list > li > .tl-name {
-	top: 50%;
-	font-size: 1.2rem;
-	transform: translate(-50%, -50%);
+
+	font-size: 1rem;
 }
 .tool-list > li > .tl-exp {	
-	top: calc(50% + 1.4rem);
-	font-size: 1rem;
-	transform: translate(-50%, -50%);
+	font-size: 0.8rem;
 }
 /* Interests Section */
 .outer-frame {
@@ -348,17 +326,16 @@ body {
 	align-items: center;
 	justify-content: baseline;
 	flex-direction: column;
-	color: var(--profile-theme);
 	padding: 1rem 0;
 	transition: all 0.3s;
 }
-.favor-list > li > i {
+.favor-list > li > img {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 40px;
-	width: 50px;
-	height: 50px;
+
+
+	height: 150px;
 }
 .favor-list > li:hover {
 	transform: scale(1.2);
@@ -426,8 +403,6 @@ body {
 </style>
 
 
-
-
 <div class="wrapper">
   <div class="intro">
     <div class="profile">
@@ -435,7 +410,7 @@ body {
         <img src="https://azrfl.github.io/dev/profile.png">
       </div>
       <div class="bio">
-        <h1 class="name">Mohd Azraful Azizi</h1>
+        <h1 class="name"> Mohd Azraful Azizi</h1>
         <p class="profession">PowerPlatform Developer</p>
       </div>
     </div>
@@ -450,7 +425,7 @@ body {
       <h1 class="title">Contact</h1>
       <div class="info-section">
         <i class="fas fa-phone"></i>
-        <span>(+601)888-888-888</span>
+        <span>(+60)17-2800 368</span>
       </div>
       <div class="info-section">
         <i class="fas fa-map-marker-alt"></i>
@@ -458,30 +433,72 @@ body {
       </div>
       <div class="info-section">
         <i class="fas fa-envelope"></i>
-        <span>mohdazrafulazizi@gmail.com</span>
+        <span style="font-size: 14px;">mohdazrafulazizi@gmail.com</span>
       </div>
    
-    </div>
+      <h1 class="title">Personal Details</h1>
+   
+      <div class="info-section">
+        <i class="fas fa-male"></i>
+        <span>Male</span>
+      </div>
+      <div class="info-section">
+        <i class="fas fa-moon"></i>
+        <span>Muslim</span>
+      </div>
 
+
+      <div class="info-section">
+        <i class="fas fa-flag"></i>
+        <span>Malaysian</span>
+      </div>
+
+      <div class="info-section">
+        <i class="fas fa-id-card"></i>
+        <span>D & B2 License</span>
+      </div>
+      <div class="info-section">
+        <i class="fas fa-heart"></i>
+        <span>Married , 3 Child</span>
+      </div>
+      <div class="info-section">
+        <i class="fas fa-tint"></i>
+        <span>O Blood</span>
+      </div>
+
+
+     
+      <div class="info-section">
+        <i class="fas fa-user-graduate"></i>
+        <span>STPM/A-Level</span>
+      </div>
+
+
+
+
+    </div>
+   
+
+    
   </div>
   <div class="detail">
     <div class="detail-section edu">
       <div class="detail-title">
         <div class="title-icon">
-          <i class="fas fa-user-graduate"></i>
+          <i class="fas fa-suitcase"></i>
         </div>
-        <span>Eduation</span>
+        <span>Career Progression</span>
       </div>
       <div class="detail-content">
         <div class="timeline-block">
-          <h1>Department of Computer Science</h1>
-          <p>National Tsing Hua University, Taiwan</p>
-          <time>2015 - 2019</time>
+          <h1>Technician ,QA Lab</h1>
+          <p>Pantech Steel Industries,Malaysia</p>
+          <time>2016 - 2019</time>
         </div>
         <div class="timeline-block">
-          <h1>Institute of Computer Science and Engineering</h1>
-          <p>National Chiao Tung University, Taiwan</p>
-          <time>2020 - present</time>
+          <h1>Researcher & Developer IOT ,QA Division</h1>
+          <p>Top Glove Worldwide, Malaysia</p>
+          <time>2019 - present</time>
         </div>
       </div>
     </div>
@@ -497,13 +514,13 @@ body {
           <li>
             <span>HTML5</span>
             <div class="sb-skeleton">
-              <div class="skillbar" style="--pgbar-length: 90%"></div>
+              <div class="skillbar" style="--pgbar-length: 95%"></div>
             </div>
           </li>
           <li>
             <span>CSS3</span>
             <div class="sb-skeleton">
-              <div class="skillbar" style="--pgbar-length: 75%"></div>
+              <div class="skillbar" style="--pgbar-length: 85%"></div>
             </div>
           </li>
           <li>
@@ -513,113 +530,162 @@ body {
             </div>
           </li>
           <li>
-            <span>JQuery</span>
+            <span>Power Apps</span>
             <div class="sb-skeleton">
-              <div class="skillbar" style="--pgbar-length: 50%"></div>
+              <div class="skillbar" style="--pgbar-length: 95%"></div>
             </div>
           </li>
           <li>
-            <span>NodeJS</span>
+            <span>Power Automate</span>
+            <div class="sb-skeleton">
+              <div class="skillbar" style="--pgbar-length: 85%"></div>
+            </div>
+          </li>
+          <li>
+            <span>PowerShell & VBA</span>
             <div class="sb-skeleton">
               <div class="skillbar" style="--pgbar-length: 70%"></div>
             </div>
           </li>
           <li>
-            <span>ReactJS</span>
+            <span>Power BI & DAX</span>
             <div class="sb-skeleton">
-              <div class="skillbar" style="--pgbar-length: 75%"></div>
+              <div class="skillbar" style="--pgbar-length: 70%"></div>
             </div>
           </li>
           <li>
-            <span>VueJS</span>
+            <span>PHP</span>
+            <div class="sb-skeleton">
+              <div class="skillbar" style="--pgbar-length: 70%"></div>
+            </div>
+          </li>
+          <li>
+            <span>My SQL</span>
+            <div class="sb-skeleton">
+              <div class="skillbar" style="--pgbar-length: 70%"></div>
+            </div>
+          </li>
+
+          <li>
+            <span>Python</span>
             <div class="sb-skeleton">
               <div class="skillbar" style="--pgbar-length: 40%"></div>
             </div>
           </li>
-        </ul>
-      </div>
-    </div>
-    <div class="detail-section tool-skill">
-      <div class="detail-title">
-        <div class="title-icon">
-          <i class="fas fa-tools"></i>
-        </div>
-        <span>Developement Tools</span>
-      </div>
-      <div class="detail-content">
-        <ul class="tool-list">
           <li>
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.6"></circle>
-            </svg>
-            <span class="tl-name">Photoshop</span>
-            <span class="tl-exp">60%</span>
+            <span>C#</span>
+            <div class="sb-skeleton">
+              <div class="skillbar" style="--pgbar-length: 10%"></div>
+            </div>
           </li>
           <li>
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.8"></circle>
-            </svg>
-            <span class="tl-name">Sublime</span>
-            <span class="tl-exp">80%</span>
+            <span>MS Excel</span>
+            <div class="sb-skeleton">
+              <div class="skillbar" style="--pgbar-length: 95%"></div>
+            </div>
           </li>
-          <li>
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.7"></circle>
-            </svg>
-            <span class="tl-name">Git</span>
-            <span class="tl-exp">70%</span>
-          </li>
-          <li>
-            <svg viewbox="0 0 100 100">
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle class="cbar" cx="50" cy="50" r="45" style="--percent: 0.74"></circle>
-            </svg>
-            <span class="tl-name">NPM</span>
-            <span class="tl-exp">74%</span>
-          </li>
-        </ul>
-      </div>
 
+
+        </ul>
+      </div>
     </div>
+
+
     <div class="detail-section interests">
       <div class="detail-title">
         <div class="title-icon">
-          <i class="fas fa-heart"></i>
+          <i class="fas fa-crosshairs"></i>
         </div>
-        <span>Interests</span>
+        <span>PowerPlatform Contribution</span>
       </div>
       <div class="detail-content">
         <div class="outer-frame">
           <ul class="favor-list">
             <li>
-              <i class="fas fa-gamepad"></i>
-              <span>Game</span>
+              <img src="/Users/azraful/Pictures/forportfolio/Palist.PNG">
+              <span>Built & Manage <br>PowerAutomate Flows </span>
             </li>
             <li>
-              <i class="fas fa-paw"></i>
-              <span>Pet</span>
+              <img src="/Users/azraful/Pictures/forportfolio/Applist.PNG">
+              <span>Develop Web&Mobile Apps,<br>Systems<br> using PowerApps</span>
             </li>
             <li>
-              <i class="far fa-headphones-alt"></i>
-              <span>Music</span>
+              <img src="/Users/azraful/Pictures/forportfolio/Bi List.PNG">
+              <span>Design Analytic and<br> Holistic Reports<br> in PowerBI  </span>
             </li>
-            <li>
-              <i class="fas fa-book-spells"></i>
-              <span>Self-learning</span>
-            </li>
-            <li>
-              <i class="fas fa-user-edit"></i>
-              <span>Blog</span>
-            </li>
+           
           </ul>
         </div>
       </div>
     </div>
+
+
+
+    <div class="detail-section tool-skill">
+      <div class="detail-title">
+        <div class="title-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <span>Feature Projects</span>
+      </div>
+      <div class="detail-content">
+        <ul class="tool-list">
+          <li>
+            <img src="/Users/azraful/Pictures/forportfolio/ebook_edited.jpg" alt="">
+            <span class="tl-name">
+                
+                Internal Website</span>
+            <span class="tl-exp">HTML,CSS,Javascript </span>
+          </li>
+          <li>
+            <img src="/Users/azraful/Pictures/forportfolio/artwork directory_edited.jpg">
+                   <span class="tl-name">Documents Directory</span>
+                   <span class="tl-exp">PowerShell,PowerAutomate,<br>HTML,CSS,Javascript</span>
+                 </li>
+                 <li>
+                    <img src="/Users/azraful/Pictures/forportfolio/cr_edited.jpg" alt="">
+                           <span class="tl-name">Helpdesk System</span>
+                           <span class="tl-exp">PowerApps,PowerAutomate,<br>
+                            GraphAPI</span>
+                         </li>
+                         <li>
+                            <img src="/Users/azraful/Pictures/forportfolio/irf_edited.jpg" alt="">
+                                   <span class="tl-name">External Party/Vendor Apps</span>
+                                   <span class="tl-exp">PowerAutomate,PowerApps<br>HTML,CSS,Javascript</span>
+                                 </li>
+        </ul>
+   
+        <ul class="tool-list">
+          <li>
+            <img src="/Users/azraful/Pictures/forportfolio/dashboard_edited.jpg" alt="">
+            <span class="tl-name">
+                
+               Smartboard</span>
+            <span class="tl-exp">PowerApps,PowerAutomate,ERP integration<br></span>
+          </li>
+          <li>
+            <img src="/Users/azraful/Pictures/forportfolio/BIanal_edited.jpg">
+                   <span class="tl-name">Reports & Analysis</span>
+                   <span class="tl-exp">PowerBI,PowerAutomate</span>
+                 </li>
+                 <li>
+                    <img src="/Users/azraful/Pictures/forportfolio/workerapps_edited.jpg" alt="">
+                           <span class="tl-name">Worker Apps</span>
+                           <span class="tl-exp">PowerApps,PowerAutomate</span>
+                         </li>
+                         <li>
+                            <img src="/Users/azraful/Pictures/forportfolio/PA_CRM_edited.jpg" alt="">
+                                   <span class="tl-name">Customer Complaints to CAR</span>
+                                   <span class="tl-exp">PowerAutomate,CRM integration</span>
+                                 </li>
+        </ul>
+      </div>
+
+    </div>
+ 
   </div>
 </div>
+
 
 </body>
 </html>
